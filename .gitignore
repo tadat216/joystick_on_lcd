@@ -1,0 +1,21 @@
+# Arduino IDE / arduino-cli build output
+build/
+*.hex
+*.elf
+*.bin
+*.map
+
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# VS Code / Arduino IDE 2 workspace files
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# secrets (wifi creds, api keys, ...)
+arduino_secrets.h
