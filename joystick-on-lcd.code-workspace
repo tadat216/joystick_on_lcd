@@ -1,0 +1,8 @@
+{
+  "folders": [
+    { "name": "joystick (ESP32-C3 sender)", "path": "joystick" },
+    { "name": "lcd-read-data (CYD receiver)", "path": "lcd-read-data" },
+    { "name": "shared", "path": "shared" }
+  ],
+  "settings": {}
+}
