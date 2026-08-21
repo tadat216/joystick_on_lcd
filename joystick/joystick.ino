@@ -1,11 +1,10 @@
 #include <Arduino.h>
-#include <LibPrintf.h>
 
-#define UP 2
-#define DWN 3
-#define LET 4
-#define RHT 5
-#define MID 6
+#define UP 1
+#define DWN 2
+#define LET 3
+#define RHT 4
+#define MID 5
 
 struct JoystickStatus{
   int x, y, mid;
@@ -31,6 +30,7 @@ void setup() {
   pinMode(LET, INPUT_PULLUP);
   pinMode(RHT, INPUT_PULLUP);
   pinMode(MID, INPUT_PULLUP);
+  Serial.print("Hello world!");
 }
 
 void updateJoystickStatus(){
@@ -42,7 +42,7 @@ void updateJoystickStatus(){
 void loop() {
   updateJoystickStatus();
   if(cur_st != prv_st){
-    printf("x: %d, y: %d, mid: %d\n", cur_st.x, cur_st.y, cur_st.mid);
+    Serial.printf("x: %d, y: %d, mid: %d\n", cur_st.x, cur_st.y, cur_st.mid);
     prv_st = cur_st;
   }
   delay(50);
